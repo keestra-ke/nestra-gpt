@@ -1,85 +1,222 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
-<title>Nestra | Find Houses Around You</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Nestra | Discover Houses Around You</title>
 
 <style>
 
-body{
-font-family: Arial, sans-serif;
+*{
 margin:0;
-background:#f5f5f5;
+padding:0;
+box-sizing:border-box;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+background:#fafafa;
+color:#111;
 }
 
 header{
-background:#0f172a;
-color:white;
-padding:20px;
 display:flex;
 justify-content:space-between;
 align-items:center;
+padding:20px 60px;
+background:white;
+box-shadow:0 1px 10px rgba(0,0,0,0.05);
 }
 
 .logo{
 font-size:24px;
 font-weight:bold;
+color:#2563eb;
 }
 
 nav a{
-color:white;
-margin-left:20px;
+margin-left:30px;
 text-decoration:none;
+color:#333;
+font-weight:500;
 }
 
 .hero{
-padding:80px;
+
+height:90vh;
+
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+
 text-align:center;
-background:white;
+
+background:linear-gradient(
+rgba(0,0,0,0.45),
+rgba(0,0,0,0.45)
+),
+
+url("https://images.unsplash.com/photo-1560448075-bb485b067938?auto=format&fit=crop&w=1600&q=80");
+
+background-size:cover;
+background-position:center;
+
+color:white;
+
 }
 
 .hero h1{
-font-size:42px;
+font-size:55px;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:20px;
+opacity:0.9;
 }
 
 .search-box{
-margin-top:20px;
-}
 
-input{
-padding:12px;
-width:250px;
-}
+margin-top:35px;
 
-button{
-padding:12px 20px;
-background:#2563eb;
-color:white;
-border:none;
-cursor:pointer;
-}
+display:flex;
 
-.listings{
-padding:40px;
-display:grid;
-grid-template-columns:repeat(auto-fill,minmax(250px,1fr));
-gap:20px;
-}
-
-.card{
 background:white;
-border-radius:10px;
-padding:15px;
-box-shadow:0 2px 8px rgba(0,0,0,0.1);
+
+border-radius:40px;
+
+overflow:hidden;
+
 }
 
-.card img{
-width:100%;
-border-radius:8px;
+.search-box input{
+
+border:none;
+
+padding:16px;
+
+width:260px;
+
+outline:none;
+
+}
+
+.search-box button{
+
+background:#2563eb;
+
+border:none;
+
+color:white;
+
+padding:16px 28px;
+
+cursor:pointer;
+
+font-size:16px;
+
+}
+
+.cta-buttons{
+
+margin-top:40px;
+
+display:flex;
+
+gap:20px;
+
+}
+
+.btn{
+
+padding:14px 30px;
+
+border-radius:30px;
+
+border:none;
+
+font-size:16px;
+
+cursor:pointer;
+
+transition:0.3s;
+
+}
+
+.primary{
+
+background:#2563eb;
+
+color:white;
+
+}
+
+.secondary{
+
+background:white;
+
+color:#111;
+
+}
+
+.btn:hover{
+
+transform:translateY(-2px);
+
+}
+
+.features{
+
+padding:80px 60px;
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+gap:30px;
+
+}
+
+.feature-card{
+
+background:white;
+
+padding:30px;
+
+border-radius:12px;
+
+box-shadow:0 4px 20px rgba(0,0,0,0.06);
+
+}
+
+.feature-card h3{
+
+margin-bottom:10px;
+
+}
+
+footer{
+
+text-align:center;
+
+padding:30px;
+
+background:#111;
+
+color:white;
+
+margin-top:60px;
+
 }
 
 </style>
+
 </head>
+
 
 <body>
 
@@ -88,10 +225,12 @@ border-radius:8px;
 <div class="logo">NESTRA</div>
 
 <nav>
-<a href="#">Home</a>
+
 <a href="#">Explore</a>
+<a href="#">Map</a>
 <a href="#">List Property</a>
 <a href="#">Login</a>
+
 </nav>
 
 </header>
@@ -99,38 +238,66 @@ border-radius:8px;
 
 <section class="hero">
 
-<h1>Find Rental Houses Around You</h1>
-<p>Discover verified houses in Nairobi with GPS.</p>
+<h1>Find Houses Around You Instantly</h1>
+
+<p>Discover verified rentals in Nairobi with GPS.</p>
 
 <div class="search-box">
-<input placeholder="Search location e.g Westlands">
+
+<input placeholder="Search Nairobi location">
+
 <button>Search</button>
+
+</div>
+
+
+<div class="cta-buttons">
+
+<button class="btn primary">Explore Map</button>
+
+<button class="btn secondary">Open Mobile View</button>
+
 </div>
 
 </section>
 
 
-<section class="listings">
+<section class="features">
 
-<div class="card">
-<img src="https://picsum.photos/400/300">
-<h3>Kilimani Apartment</h3>
-<p>Ksh 25,000 / month</p>
+<div class="feature-card">
+
+<h3>📍 GPS House Discovery</h3>
+
+<p>See available rentals around you instantly on the map.</p>
+
 </div>
 
-<div class="card">
-<img src="https://picsum.photos/401/300">
-<h3>Westlands Bedsitter</h3>
-<p>Ksh 12,000 / month</p>
+<div class="feature-card">
+
+<h3>📸 Verified Listings</h3>
+
+<p>Landlords upload real photos and prices.</p>
+
 </div>
 
-<div class="card">
-<img src="https://picsum.photos/402/300">
-<h3>Rongai Studio</h3>
-<p>Ksh 8,500 / month</p>
+<div class="feature-card">
+
+<h3>⚡ Instant Comparison</h3>
+
+<p>Compare rent, utilities, and neighborhood info.</p>
+
 </div>
 
 </section>
+
+
+<footer>
+
+<p>Nestra © 2026 | Nairobi PropTech Platform</p>
+
+</footer>
+
 
 </body>
+
 </html>
