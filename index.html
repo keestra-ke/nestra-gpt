@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Nestra | Find Houses Around You</title>
+
+<style>
+
+body{
+font-family: Arial, sans-serif;
+margin:0;
+background:#f5f5f5;
+}
+
+header{
+background:#0f172a;
+color:white;
+padding:20px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
+font-size:24px;
+font-weight:bold;
+}
+
+nav a{
+color:white;
+margin-left:20px;
+text-decoration:none;
+}
+
+.hero{
+padding:80px;
+text-align:center;
+background:white;
+}
+
+.hero h1{
+font-size:42px;
+}
+
+.search-box{
+margin-top:20px;
+}
+
+input{
+padding:12px;
+width:250px;
+}
+
+button{
+padding:12px 20px;
+background:#2563eb;
+color:white;
+border:none;
+cursor:pointer;
+}
+
+.listings{
+padding:40px;
+display:grid;
+grid-template-columns:repeat(auto-fill,minmax(250px,1fr));
+gap:20px;
+}
+
+.card{
+background:white;
+border-radius:10px;
+padding:15px;
+box-shadow:0 2px 8px rgba(0,0,0,0.1);
+}
+
+.card img{
+width:100%;
+border-radius:8px;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">NESTRA</div>
+
+<nav>
+<a href="#">Home</a>
+<a href="#">Explore</a>
+<a href="#">List Property</a>
+<a href="#">Login</a>
+</nav>
+
+</header>
+
+
+<section class="hero">
+
+<h1>Find Rental Houses Around You</h1>
+<p>Discover verified houses in Nairobi with GPS.</p>
+
+<div class="search-box">
+<input placeholder="Search location e.g Westlands">
+<button>Search</button>
+</div>
+
+</section>
+
+
+<section class="listings">
+
+<div class="card">
+<img src="https://picsum.photos/400/300">
+<h3>Kilimani Apartment</h3>
+<p>Ksh 25,000 / month</p>
+</div>
+
+<div class="card">
+<img src="https://picsum.photos/401/300">
+<h3>Westlands Bedsitter</h3>
+<p>Ksh 12,000 / month</p>
+</div>
+
+<div class="card">
+<img src="https://picsum.photos/402/300">
+<h3>Rongai Studio</h3>
+<p>Ksh 8,500 / month</p>
+</div>
+
+</section>
+
+</body>
+</html>
